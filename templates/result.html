@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AutoNotes AI</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b0f19;
+            color: #e5e7eb;
+        }
+
+        .topbar {
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            background: #111827;
+            color: #38bdf8;
+            border-bottom: 1px solid #1f2937;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .section {
+            background: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            white-space: pre-wrap;
+            line-height: 1.6;
+        }
+
+        .title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #60a5fa;
+            font-weight: bold;
+        }
+
+        .button-group {
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 16px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            background: #22c55e;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .btn:hover {
+            background: #16a34a;
+        }
+
+        .pdf-btn {
+            background: #ef4444;
+        }
+
+        .pdf-btn:hover {
+            background: #dc2626;
+        }
+
+        .history-btn {
+            background: #2563eb;
+        }
+
+        .history-btn:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="topbar">
+    🚀 AutoNotes AI
+</div>
+
+<div class="container">
+
+    <div class="section">
+        <div class="title">📄 Transcript</div>
+        {{ transcript }}
+    </div>
+
+    <div class="section">
+        <div class="title">🧠 AI Notes</div>
+        {{ ai_notes }}
+    </div>
+
+    <div class="button-group">
+        <a href="/download-pdf" class="btn pdf-btn">📄 Download PDF</a>
+
+        <a href="/history" class="btn history-btn">📚 History</a>
+
+        <a href="/" class="btn">⬅ Upload Another Video</a>
+    </div>
+
+</div>
+
+</body>
+</html>

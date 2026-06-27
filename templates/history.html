@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AutoNotes AI - History</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b0f19;
+            color: #e5e7eb;
+        }
+
+        .topbar {
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            background: #111827;
+            color: #38bdf8;
+            border-bottom: 1px solid #1f2937;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .filename {
+            color: #38bdf8;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            color: #60a5fa;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+
+        .content {
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 16px;
+            background: #22c55e;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background: #16a34a;
+        }
+
+        .empty {
+            text-align: center;
+            padding: 40px;
+            color: #9ca3af;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="topbar">
+    📚 AutoNotes AI History
+</div>
+
+<div class="container">
+
+    {% if records %}
+
+        {% for item in records %}
+
+        <div class="card">
+
+            <div class="filename">
+                🎥 {{ item.filename }}
+            </div>
+
+            <div class="title">
+                📄 Transcript
+            </div>
+
+            <div class="content">
+                {{ item.transcript }}
+            </div>
+
+            <div class="title">
+                🧠 AI Notes
+            </div>
+
+            <div class="content">
+                {{ item.ai_notes }}
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <div class="empty">
+            No history available yet.<br>
+            Upload a video and generate notes first.
+        </div>
+
+    {% endif %}
+
+    <a class="btn" href="/">⬅ Back to Home</a>
+
+</div>
+
+</body>
+</html>

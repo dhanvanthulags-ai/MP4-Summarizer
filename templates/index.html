@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AutoNotes AI</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#0b0f19;
+            color:white;
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .container{
+            width:90%;
+            max-width:700px;
+            background:#111827;
+            border:1px solid #1f2937;
+            border-radius:20px;
+            padding:40px;
+            text-align:center;
+            box-shadow:0 0 30px rgba(0,0,0,0.4);
+        }
+
+        h1{
+            color:#38bdf8;
+            margin-bottom:10px;
+            font-size:40px;
+        }
+
+        .subtitle{
+            color:#9ca3af;
+            margin-bottom:30px;
+            font-size:18px;
+        }
+
+        .upload-box{
+            border:2px dashed #374151;
+            border-radius:15px;
+            padding:40px;
+            margin-bottom:25px;
+        }
+
+        input[type="file"]{
+            width:100%;
+            padding:12px;
+            background:#1f2937;
+            color:white;
+            border:none;
+            border-radius:10px;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:20px;
+            padding:12px 25px;
+            background:#22c55e;
+            color:white;
+            border:none;
+            border-radius:10px;
+            cursor:pointer;
+            font-size:16px;
+            text-decoration:none;
+        }
+
+        .btn:hover{
+            background:#16a34a;
+        }
+
+        .history-btn{
+            background:#2563eb;
+            margin-left:10px;
+        }
+
+        .history-btn:hover{
+            background:#1d4ed8;
+        }
+
+        .features{
+            margin-top:30px;
+            text-align:left;
+        }
+
+        .features h3{
+            color:#38bdf8;
+            margin-bottom:10px;
+        }
+
+        .features ul{
+            color:#d1d5db;
+            line-height:1.8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🚀 AutoNotes AI</h1>
+
+    <p class="subtitle">
+        Upload a video and get AI-generated notes instantly
+    </p>
+
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+
+        <div class="upload-box">
+
+            <h3 style="margin-bottom:20px;">📹 Upload Video</h3>
+
+            <input type="file" name="video" accept=".mp4,.mov,.avi,.mkv" required>
+
+        </div>
+
+        <button class="btn" type="submit">
+            Generate Notes
+        </button>
+
+        <a href="/history" class="btn history-btn">
+            📚 History
+        </a>
+
+    </form>
+
+    <div class="features">
+
+        <h3>✨ Features</h3>
+
+        <ul>
+            <li>🎤 Whisper Speech-to-Text</li>
+            <li>🧠 Gemini AI Notes</li>
+            <li>📄 PDF Download</li>
+            <li>📚 History Tracking</li>
+        </ul>
+
+    </div>
+
+</div>
+
+</body>
+</html>
